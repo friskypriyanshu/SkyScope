@@ -1,7 +1,4 @@
-/* =====================================================
-   SkyScope — style.css
-   Dynamic weather app with India map + global cities
-   ===================================================== */
+
 
 :root {
   --glass:        rgba(255,255,255,0.10);
@@ -34,13 +31,12 @@ body.snow         { background: linear-gradient(135deg,#a8c0ff,#3f2b96); }
 body.mist         { background: linear-gradient(135deg,#606c88,#3f4c6b); }
 body.hot          { background: linear-gradient(135deg,#f83600,#f9d423); }
 
-/*  CANVAS */
+
 #anim-canvas {
   position: fixed; inset: 0;
   pointer-events: none; z-index: 0;
 }
 
-/* ── LAYOUT ──────────────────────────────────────── */
 .sidebar {
   position: fixed; left:0; top:0; bottom:0;
   width: var(--sidebar-w);
@@ -70,7 +66,6 @@ body.hot          { background: linear-gradient(135deg,#f83600,#f9d423); }
 }
 .sidebar.hidden ~ .map-area { margin-left: 0; }
 
-/* ── SIDEBAR HEADER ──────────────────────────────── */
 .sidebar-header {
   display: flex;
   justify-content: space-between;
@@ -88,7 +83,6 @@ body.hot          { background: linear-gradient(135deg,#f83600,#f9d423); }
   display: flex; align-items:center; justify-content:center;
 }
 
-/* ── SEARCH ──────────────────────────────────────── */
 .sidebar-search { position:relative; margin-bottom:18px; }
 .sidebar-search input {
   width:100%; padding:11px 44px 11px 16px;
@@ -131,7 +125,6 @@ body.hot          { background: linear-gradient(135deg,#f83600,#f9d423); }
 }
 .suggestion-item:hover { background: var(--glass-hover); }
 
-/* ── CURRENT CARD ────────────────────────────────── */
 .current-card {
   text-align:center; padding:16px 8px 20px;
   border-bottom:1px solid var(--glass-border);
@@ -168,7 +161,6 @@ body.hot          { background: linear-gradient(135deg,#f83600,#f9d423); }
 .stat-label { display:block; font-size:10px; color:var(--muted); margin-bottom:4px; }
 .stat-value { display:block; font-size:15px; font-weight:500; }
 
-/* ── AQI ─────────────────────────────────────────── */
 .section-label {
   font-size:11px; color:var(--muted);
   text-transform:uppercase; letter-spacing:1px;
@@ -192,15 +184,15 @@ body.hot          { background: linear-gradient(135deg,#f83600,#f9d423); }
 }
 .aqi-scale span { font-size:9px; color:var(--dim); }
 
-/* ── SUN ARC ─────────────────────────────────────── */
+
 .sun-section { margin-bottom:16px; }
 #sun-arc-wrap { padding:4px 0; }
 
-/* ── CHART ───────────────────────────────────────── */
+/* ── Chart ke liye───────────────────────────────────────── */
 .chart-section { margin-bottom:16px; }
 .chart-wrap { height:130px; position:relative; }
 
-/* ── FORECAST ────────────────────────────────────── */
+/* ── FORECAST batayega────────────────────────────────────── */
 .forecast-section { margin-bottom:16px; }
 .forecast-row {
   display:flex; align-items:center;
@@ -214,7 +206,7 @@ body.hot          { background: linear-gradient(135deg,#f83600,#f9d423); }
 .fc-hi   { font-weight:500; }
 .fc-lo   { color:var(--muted); }
 
-/* ── ANALYSIS (Flask) ────────────────────────────── */
+/* ──(Flask) ────────────────────────────── */
 .analysis-section { margin-bottom:16px; }
 #analysis-wrap { display:flex; flex-direction:column; gap:8px; }
 .analysis-card {
@@ -234,7 +226,7 @@ body.hot          { background: linear-gradient(135deg,#f83600,#f9d423); }
 .carwash-row { font-size:13px; font-weight:500; }
 .sun-advice { font-size:12px; color:var(--muted); margin-top:4px; line-height:1.5; }
 
-/* ── API SECTION ─────────────────────────────────── */
+/* ── API ka section─────────────────────────────────── */
 .api-section { border-top:1px solid var(--glass-border); padding-top:16px; }
 .api-toggle { display:flex; gap:6px; margin-bottom:8px; }
 .api-btn {
@@ -266,7 +258,7 @@ body.hot          { background: linear-gradient(135deg,#f83600,#f9d423); }
 .api-input-wrap button:hover { background:rgba(255,255,255,0.3); }
 .api-hint { font-size:11px; color:var(--dim); margin-top:6px; line-height:1.4; }
 
-/* ── MAP AREA ────────────────────────────────────── */
+/* ── MAP ───────────────────────────────────── */
 .menu-btn {
   position:absolute; top:16px; left:16px; z-index:50;
   background:rgba(0,0,0,0.35); backdrop-filter:blur(12px);
