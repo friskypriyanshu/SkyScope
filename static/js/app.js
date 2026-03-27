@@ -1,14 +1,10 @@
-// ============================================================
-//  SkyScope — app.js
-//  Main controller: search, selection, sidebar, API vs demo
-// ============================================================
+
 
 let dataSource  = localStorage.getItem("skyscope_source") || "demo";
 let currentData = null;
 let currentName = "Delhi";
 let unitC       = true; // true = °C, false = °F
 
-// ─── BOOT ────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
   initAnimCanvas();
   initMap();
