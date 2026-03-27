@@ -1,7 +1,4 @@
-// ============================================================
-//  SkyScope — map.js
-//  India SVG map: state paths, emoji markers, layer toggles
-// ============================================================
+
 
 // Approximate SVG coordinates [cx, cy] for each state label/marker
 // viewBox: 0 0 800 900
